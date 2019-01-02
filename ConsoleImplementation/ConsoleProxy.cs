@@ -13,7 +13,7 @@
 		/// </summary>
 		static ConsoleProxy()
 		{
-			Instance = new ConsoleProxy();
+			LocalInstance = new ConsoleProxy();
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@
 		/// Gets the instance.
 		/// </summary>
 		/// <value>The instance.</value>
-		private static IConsoleProxy Instance { get; }
+		private static IConsoleProxy LocalInstance { get; }
 
 		/// <summary>
 		/// Gets the shared instance of the console proxy.
@@ -38,9 +38,9 @@
 		/// <returns>
 		/// Instance of the console proxy wrapping the static System.Console.
 		/// </returns>
-		public static IConsoleProxy Get()
+		public static IConsoleProxy Instance()
 		{
-			return Instance;
+			return LocalInstance;
 		}
 
 		/// <inheritdoc />
@@ -85,7 +85,7 @@
 		}
 
 		/// <inheritdoc />
-		public IConsoleProxy ReadKey(bool intercept, out ConsoleKeyInfo key)
+		public IConsoleProxy ReadKey(out ConsoleKeyInfo key, bool intercept = false)
 		{
 			key = Console.ReadKey(intercept);
 			return this;
@@ -143,6 +143,12 @@
 			return this;
 		}
 
+		public IConsoleProxy Style(StyleName name)
+		{
+			this.Style(ConsoleStyle.Get(name));
+			return this;
+		}
+
 		/// <inheritdoc />
 		public IConsoleProxy SetTitle(string title)
 		{
@@ -158,9 +164,9 @@
 		}
 
 		/// <inheritdoc />
-		public IConsoleProxy WriteLine()
+		public IConsoleProxy WriteLine(string value = "")
 		{
-			Console.WriteLine();
+			Console.WriteLine(value);
 			return this;
 		}
 	}

@@ -22,14 +22,14 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		private readonly StringBuilder result = new StringBuilder();
 
 		/// <summary>
-		/// The position of the cursor.
-		/// </summary>
-		private CursorPoint position;
-
-		/// <summary>
 		/// Container for the console title.
 		/// </summary>
 		private string innerTitle;
+
+		/// <summary>
+		/// The position of the cursor.
+		/// </summary>
+		private CursorPoint position;
 
 		/// <summary>
 		/// Gets the width of the console window.
@@ -92,7 +92,7 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 
 		/// <inheritdoc />
 		/// <exception cref="NoMoreKeysInKeyQueue">Thrown when no more keys exists in the queue.</exception>
-		public IConsoleProxy ReadKey(bool intercept, out ConsoleKeyInfo key)
+		public IConsoleProxy ReadKey(out ConsoleKeyInfo key, bool intercept)
 		{
 			key = this.ReadKey(intercept);
 			return this;
@@ -138,6 +138,14 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		}
 
 		/// <inheritdoc />
+		public IConsoleProxy SetTitle(string title)
+		{
+			this.Append(config: title);
+			this.innerTitle = title;
+			return this;
+		}
+
+		/// <inheritdoc />
 		public IConsoleProxy ShowCursor()
 		{
 			this.Append();
@@ -166,17 +174,15 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		}
 
 		/// <inheritdoc />
-		public virtual IConsoleProxy Style(ConsoleStyle style)
+		public IConsoleProxy Style(ConsoleStyle style)
 		{
 			this.Style(style.Foreground, style.Background);
 			return this;
 		}
 
-		/// <inheritdoc />
-		public IConsoleProxy SetTitle(string title)
+		public IConsoleProxy Style(StyleName name)
 		{
-			this.Append(config: title);
-			this.innerTitle = title;
+			this.Style(ConsoleStyle.Get(name));
 			return this;
 		}
 
@@ -206,8 +212,9 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		}
 
 		/// <inheritdoc />
-		public IConsoleProxy WriteLine()
+		public IConsoleProxy WriteLine(string value)
 		{
+			this.Write(value);
 			this.result.Append("\n");
 			this.position = new CursorPoint(this.position.Top + 1, 0);
 			return this;

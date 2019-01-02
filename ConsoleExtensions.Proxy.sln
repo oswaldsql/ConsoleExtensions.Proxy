@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleExtensions.Proxy.Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleExtensions.Proxy.Tests", "Tests\ConsoleExtensions.Proxy.Tests.csproj", "{8A0EDF6E-924D-44CC-824D-8CCE09E43EFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{35CD207B-96BB-4367-BEED-259517A0A4AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8A0EDF6E-924D-44CC-824D-8CCE09E43EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A0EDF6E-924D-44CC-824D-8CCE09E43EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A0EDF6E-924D-44CC-824D-8CCE09E43EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CD207B-96BB-4367-BEED-259517A0A4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CD207B-96BB-4367-BEED-259517A0A4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CD207B-96BB-4367-BEED-259517A0A4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CD207B-96BB-4367-BEED-259517A0A4AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -55,10 +55,10 @@
 		/// <summary>
 		/// Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
 		/// </summary>
-		/// <param name="intercept"> Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.  </param>
 		/// <param name="key">An object that describes the <see cref="T:System.ConsoleKey"/> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo"/> object also describes, in a bitwise combination of <see cref="T:System.ConsoleModifiers"/> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</param>
+		/// <param name="intercept"> Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.  </param>
 		/// <returns>The current Console Proxy.</returns>
-		IConsoleProxy ReadKey(bool intercept, out ConsoleKeyInfo key);
+		IConsoleProxy ReadKey(out ConsoleKeyInfo key, bool intercept = false);
 
 		/// <summary>
 		/// Reads the next line of characters from the standard input stream.
@@ -99,7 +99,7 @@
 		/// <param name="foreground">The foreground.</param>
 		/// <param name="background">The background.</param>
 		/// <returns>The current Console Proxy.</returns>
-		IConsoleProxy Style(ConsoleColor? foreground = null, ConsoleColor? background = null);
+		//IConsoleProxy Style(ConsoleColor? foreground = null, ConsoleColor? background = null);
 
 		/// <summary>
 		/// Styles the output of the console based on a predefined style.
@@ -107,6 +107,14 @@
 		/// <param name="style">The style.</param>
 		/// <returns>The current Console Proxy.</returns>
 		IConsoleProxy Style(ConsoleStyle style);
+
+		/// <summary>
+		/// Styles the output of the console based on a predefined style.
+		/// </summary>
+		/// <param name="style">The style.</param>
+		/// <returns>The current Console Proxy.</returns>
+		IConsoleProxy Style(StyleName name);
+
 
 		/// <summary>
 		/// Writes the specified value to the console.
@@ -119,6 +127,15 @@
 		/// Writes a line break to the console.
 		/// </summary>
 		/// <returns>The current Console Proxy.</returns>
-		IConsoleProxy WriteLine();
+		IConsoleProxy WriteLine(string value = "");
+	}
+
+	public enum StyleName
+	{
+		Default, 
+		Error,
+		Info,
+		Ok,
+		Warning
 	}
 }

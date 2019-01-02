@@ -20,15 +20,34 @@
 			this.Background = background;
 		}
 
-		public static ConsoleStyle Default { get; } = new ConsoleStyle("Default", ConsoleColor.Gray);
+		public static ConsoleStyle Get(StyleName name)
+		{
+				switch (name)
+				{
+					case StyleName.Default:
+						return ConsoleStyle.Default;
+					case StyleName.Error:
+						return ConsoleStyle.Error;
+					case StyleName.Info:
+						return ConsoleStyle.Info;
+					case StyleName.Ok:
+						return ConsoleStyle.Ok;
+					case StyleName.Warning:
+						return ConsoleStyle.Warning;
+					default:
+						return ConsoleStyle.Default;
+				}
+		}
 
-		public static ConsoleStyle Error { get; } = new ConsoleStyle("Error", ConsoleColor.Red);
+		public static ConsoleStyle Default { get; } = new ConsoleStyle("Default", ConsoleColor.Gray, ConsoleColor.Black);
 
-		public static ConsoleStyle Info { get; } = new ConsoleStyle("Info", ConsoleColor.Blue);
+		public static ConsoleStyle Error { get; } = new ConsoleStyle("Error", ConsoleColor.Red, ConsoleColor.Black);
 
-		public static ConsoleStyle Ok { get; } = new ConsoleStyle("Ok", ConsoleColor.Green);
+		public static ConsoleStyle Info { get; } = new ConsoleStyle("Info", ConsoleColor.Blue, ConsoleColor.Gray);
 
-		public static ConsoleStyle Warning { get; } = new ConsoleStyle("Warning", ConsoleColor.Yellow);
+		public static ConsoleStyle Ok { get; } = new ConsoleStyle("Ok", ConsoleColor.Green, ConsoleColor.Black);
+
+		public static ConsoleStyle Warning { get; } = new ConsoleStyle("Warning", ConsoleColor.Yellow, ConsoleColor.Black);
 
 		/// <summary>
 		/// Gets the background color of the console.
