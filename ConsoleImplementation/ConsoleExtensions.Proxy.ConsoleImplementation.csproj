@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Lasse Sjørup</Authors>
+    <Description>Wraps System.Console in a interface for testability, injectability and general niceness.</Description>
+    <Copyright>Lasse Sjørup 2019</Copyright>
+    <PackageTags>Console</PackageTags>
+    <AssemblyName>ConsoleExtensions.Proxy.ConsoleImplementation</AssemblyName>
+    <RootNamespace>ConsoleExtensions.Proxy</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Console" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreInterface\ConsoleExtensions.Proxy.csproj" />
+  </ItemGroup>
+
+</Project>
