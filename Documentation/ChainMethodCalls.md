@@ -25,4 +25,4 @@ private static void GreetAndAskForName(IConsoleProxy console)
 }
 ```
 
-Not saving a lot of code i know, but it does give you [the posibility of adding tests](UnitTestConsoleOutput.md)
+Not saving a lot of code I know, but it also gives you [the posibility of adding tests](UnitTestConsoleOutput.md)
