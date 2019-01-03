@@ -24,3 +24,5 @@ private static void GreetAndAskForName(IConsoleProxy console)
 	    .ReadLine(out _);
 }
 ```
+
+Not saving a lot of code i know, but it does give you [the posibility of adding tests](UnitTestConsoleOutput.md)

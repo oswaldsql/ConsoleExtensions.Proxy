@@ -2,7 +2,9 @@
 
 ```c#
 var console = ConsoleProxy.Instance();
-console.HR().WriteLine(" Fantastic 'ask your name' app").HR();
+console.HR()
+    .WriteLine(" Fantastic 'ask your name' app")
+    .HR();
 
 public static class WriteExtensions
 {

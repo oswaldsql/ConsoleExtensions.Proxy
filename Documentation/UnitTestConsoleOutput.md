@@ -27,3 +27,5 @@ public void GivenACallToGreet_WhenUserGivesName_ThenTheGreetingShouldBeRendered(
 	Assert.Equal("Welcome user.\nWhat is your name? \nWelcome Oswald\n", testProxy.ToString());
 }
 ```
+
+Not something you technically can't do with the existing console. But you can't [extend the functionality with extension methods](ExtendTheConsole.md)
