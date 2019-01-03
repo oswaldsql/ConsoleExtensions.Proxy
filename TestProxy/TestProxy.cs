@@ -153,7 +153,7 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		}
 
 		/// <inheritdoc />
-		public IConsoleProxy Style(ConsoleColor? foreground = null, ConsoleColor? background = null)
+		public IConsoleProxy SetColor(ConsoleColor? foreground = null, ConsoleColor? background = null)
 		{
 			var config = string.Empty;
 			if (foreground.HasValue && foreground != this.Foreground)
@@ -176,7 +176,7 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 		/// <inheritdoc />
 		public IConsoleProxy Style(ConsoleStyle style)
 		{
-			this.Style(style.Foreground, style.Background);
+			this.SetColor(style.Foreground, style.Background);
 			return this;
 		}
 

@@ -121,7 +121,7 @@
 		}
 
 		/// <inheritdoc />
-		public IConsoleProxy Style(ConsoleColor? foreground, ConsoleColor? background)
+		public IConsoleProxy SetColor(ConsoleColor? foreground, ConsoleColor? background)
 		{
 			if (foreground.HasValue)
 			{
@@ -139,7 +139,7 @@
 		/// <inheritdoc />
 		public IConsoleProxy Style(ConsoleStyle style)
 		{
-			this.Style(style.Foreground, style.Background);
+			this.SetColor(style.Foreground, style.Background);
 			return this;
 		}
 

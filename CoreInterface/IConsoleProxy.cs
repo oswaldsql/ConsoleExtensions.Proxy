@@ -94,12 +94,12 @@
 		IConsoleProxy ShowCursor();
 
 		/// <summary>
-		/// Styles the output of the console based on the foreground and background color.
+		/// Sets the colors of the console.
 		/// </summary>
-		/// <param name="foreground">The foreground.</param>
-		/// <param name="background">The background.</param>
-		/// <returns>The current Console Proxy.</returns>
-		//IConsoleProxy Style(ConsoleColor? foreground = null, ConsoleColor? background = null);
+		/// <param name="foreground">The foreground color.</param>
+		/// <param name="background">The background color.</param>
+		/// <returns>IConsoleProxy.</returns>
+		IConsoleProxy SetColor(ConsoleColor? foreground = null, ConsoleColor? background = null);
 
 		/// <summary>
 		/// Styles the output of the console based on a predefined style.
