@@ -1,8 +1,7 @@
-﻿// ReSharper disable ExceptionNotDocumented
-// ReSharper disable ExceptionNotDocumentedOptional
-
-namespace ConsoleExtensions.Proxy.Tests
+﻿namespace ConsoleExtensions.Proxy.Tests
 {
+	// ReSharper disable ExceptionNotDocumented
+	// ReSharper disable ExceptionNotDocumentedOptional
 	using ConsoleExtensions.Proxy.TestHelpers;
 
 	using Xunit;

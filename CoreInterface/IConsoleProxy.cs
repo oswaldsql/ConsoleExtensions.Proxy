@@ -98,7 +98,7 @@
 		/// </summary>
 		/// <param name="foreground">The foreground color.</param>
 		/// <param name="background">The background color.</param>
-		/// <returns>IConsoleProxy.</returns>
+		/// <returns>The current Console Proxy.</returns>
 		IConsoleProxy SetColor(ConsoleColor? foreground = null, ConsoleColor? background = null);
 
 		/// <summary>
