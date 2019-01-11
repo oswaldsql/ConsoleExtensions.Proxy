@@ -20,33 +20,29 @@
 			this.Background = background;
 		}
 
-		public static ConsoleStyle Get(StyleName name)
-		{
-				switch (name)
-				{
-					case StyleName.Default:
-						return ConsoleStyle.Default;
-					case StyleName.Error:
-						return ConsoleStyle.Error;
-					case StyleName.Info:
-						return ConsoleStyle.Info;
-					case StyleName.Ok:
-						return ConsoleStyle.Ok;
-					case StyleName.Warning:
-						return ConsoleStyle.Warning;
-					default:
-						return ConsoleStyle.Default;
-				}
-		}
-
+		/// <summary>
+		/// Gets the the default style used by the console.
+		/// </summary>
 		public static ConsoleStyle Default { get; } = new ConsoleStyle("Default", ConsoleColor.Gray, ConsoleColor.Black);
 
+		/// <summary>
+		/// Gets the style used for displaying errors.
+		/// </summary>
 		public static ConsoleStyle Error { get; } = new ConsoleStyle("Error", ConsoleColor.Red, ConsoleColor.Black);
 
+		/// <summary>
+		/// Gets the style used for displaying informational content.
+		/// </summary>
 		public static ConsoleStyle Info { get; } = new ConsoleStyle("Info", ConsoleColor.Blue, ConsoleColor.Gray);
 
+		/// <summary>
+		/// Gets the style used for displaying OK information.
+		/// </summary>
 		public static ConsoleStyle Ok { get; } = new ConsoleStyle("Ok", ConsoleColor.Green, ConsoleColor.Black);
 
+		/// <summary>
+		/// Gets the style used for warnings.
+		/// </summary>
 		public static ConsoleStyle Warning { get; } = new ConsoleStyle("Warning", ConsoleColor.Yellow, ConsoleColor.Black);
 
 		/// <summary>
@@ -66,5 +62,29 @@
 		/// </summary>
 		/// <value>The name.</value>
 		public string Name { get; }
+
+		/// <summary>
+		/// Gets the style matching the specified name.
+		/// </summary>
+		/// <param name="name">The name.</param>
+		/// <returns>The ConsoleStyle.</returns>
+		public static ConsoleStyle Get(StyleName name)
+		{
+			switch (name)
+			{
+				case StyleName.Default:
+					return Default;
+				case StyleName.Error:
+					return Error;
+				case StyleName.Info:
+					return Info;
+				case StyleName.Ok:
+					return Ok;
+				case StyleName.Warning:
+					return Warning;
+				default:
+					return Default;
+			}
+		}
 	}
 }

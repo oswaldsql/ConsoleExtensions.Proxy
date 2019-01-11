@@ -1,6 +1,5 @@
 ﻿// ReSharper disable ExceptionNotDocumented
 // ReSharper disable ExceptionNotDocumentedOptional
-
 namespace ConsoleExtensions.Proxy.Tests
 {
 	using ConsoleExtensions.Proxy.TestHelpers;
