@@ -35,7 +35,7 @@
 			testProxy.GetStyle(out var actual);
 
 			// Assert
-			Assert.Equal("current", actual.Name );
+			Assert.Equal("current", actual.Name);
 			Assert.Equal(foreground, actual.Foreground);
 			Assert.Equal(background, actual.Background);
 		}

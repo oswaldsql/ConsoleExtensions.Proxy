@@ -6,7 +6,13 @@
     <Authors>Lasse Sjørup</Authors>
     <Description>Wraps System.Console in a interface for testability, injectability and general niceness.</Description>
     <Copyright>Lasse Sjørup 2019</Copyright>
-    <PackageTags>Console</PackageTags>
+    <PackageTags>Console, Dependency injection,</PackageTags>
+    <AssemblyVersion>0.9.0.0</AssemblyVersion>
+    <FileVersion>0.9.0.0</FileVersion>
+    <Version>0.9.0-Dev</Version>
+    <PackageLicenseUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
