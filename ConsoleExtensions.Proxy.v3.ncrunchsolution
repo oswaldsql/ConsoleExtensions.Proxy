@@ -3,6 +3,7 @@
     <AllowParallelTestExecution>True</AllowParallelTestExecution>
     <MetricsExclusionList>
       <Value>Tests\ConsoleExtensions.Proxy.Tests.csproj</Value>
+      <Value>Demo\Demo.csproj</Value>
     </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>

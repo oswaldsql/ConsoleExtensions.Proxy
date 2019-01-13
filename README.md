@@ -1,4 +1,6 @@
 # ConsoleExtensions.Proxy
+![icon.png](icon.png)
+
 Wraps System.Console in a interface for fluent code, testability, extendability and general niceness.
 
 - [Chain method calls](Documentation/ChainMethodCalls.md)

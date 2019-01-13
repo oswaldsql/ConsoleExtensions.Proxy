@@ -243,14 +243,16 @@ namespace ConsoleExtensions.Proxy.TestHelpers
 				throw new NoMoreKeysInKeyQueue();
 			}
 
+			var name = intercept ? "InterceptedKey" : "Key";
+
 			var info = this.Keys.Dequeue();
 			if (info.Key == ConsoleKey.Separator)
 			{
-				this.Write($"[key:'{info.KeyChar}']");
+				this.Write($"[{name}:'{info.KeyChar}']");
 			}
 			else
 			{
-				this.Write($"[key:{info.Key}]");
+				this.Write($"[{name}:{info.Key}]");
 			}
 
 			return info;
