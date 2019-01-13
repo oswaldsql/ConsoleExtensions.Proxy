@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleExtensions.Proxy.ConsoleImplementation</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleExtensions.Proxy.ConsoleProxy">
+            <summary>
+            Class ConsoleProxy.
+            </summary>
+            <seealso cref="T:ConsoleExtensions.Proxy.IConsoleProxy" />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy"/> class.
+            </summary>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy"/> class from being created from the outside.
+            </summary>
+        </member>
+        <member name="P:ConsoleExtensions.Proxy.ConsoleProxy.WindowWidth">
+            <inheritdoc />
+        </member>
+        <member name="P:ConsoleExtensions.Proxy.ConsoleProxy.LocalInstance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <value>The instance.</value>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Instance">
+            <summary>
+            Gets the shared instance of the console proxy.
+            </summary>
+            <returns>
+            Instance of the console proxy wrapping the static System.Console.
+            </returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Beep">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.GetPosition(ConsoleExtensions.Proxy.CursorPoint@)">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.GetStyle(ConsoleExtensions.Proxy.ConsoleStyle@)">
+            <inheritdoc />
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.HideCursor">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ReadKey(System.ConsoleKeyInfo@,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ReadLine(System.String@)">
+            <inheritdoc />
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+            <exception cref="T:System.OutOfMemoryException">There is insufficient memory to allocate a buffer for the returned string.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">The number of characters in the next line of characters is greater than <see cref="F:System.Int32.MaxValue" />.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ResetStyle">
+            <inheritdoc />
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetPosition(ConsoleExtensions.Proxy.CursorPoint)">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ShowCursor">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
+            <inheritdoc />
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Style(ConsoleExtensions.Proxy.ConsoleStyle)">
+            <inheritdoc />
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Style(ConsoleExtensions.Proxy.StyleName)">
+            <inheritdoc />
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetTitle(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Write(System.String)">
+            <inheritdoc />
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.WriteLine(System.String)">
+            <inheritdoc />
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+    </members>
+</doc>
