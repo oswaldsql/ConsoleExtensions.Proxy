@@ -1,5 +1,5 @@
 # ConsoleExtensions.Proxy
-![icon.png](icon.png)
+![icon.png](https://github.com/oswaldsql/ConsoleExtensions.Proxy/raw/master/Icon.png?raw=true)
 
 Wraps System.Console in a interface for fluent code, testability, extendability and general niceness.
 
