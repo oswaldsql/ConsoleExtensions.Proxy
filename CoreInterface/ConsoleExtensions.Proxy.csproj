@@ -14,7 +14,7 @@
     <Title>ConsoleExtensions Proxy</Title>
     <PackageProjectUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</RepositoryUrl>
-    <PackageIconUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/blob/master/icon.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/blob/master/Icon.png?raw=true</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
