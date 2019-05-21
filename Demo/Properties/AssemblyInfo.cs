@@ -1,4 +1,11 @@
-﻿using System.Reflection;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="Lasse Sjørup">
+//   Copyright (c) 2019 Lasse Sjørup
+//   Licensed under the MIT license. See LICENSE file in the solution root for full license information.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following

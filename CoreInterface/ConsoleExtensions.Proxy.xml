@@ -1,259 +1,266 @@
 <?xml version="1.0"?>
+
 <doc>
-    <assembly>
-        <name>ConsoleExtensions.Proxy</name>
-    </assembly>
-    <members>
-        <member name="T:ConsoleExtensions.Proxy.ConsoleStyle">
-            <summary>
-            Class ConsoleStyle.
-            </summary>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.ConsoleStyle.#ctor(System.String,System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
-            <summary>
-            Initializes a new instance of the <see cref="T:ConsoleExtensions.Proxy.ConsoleStyle"/> class.
-            </summary>
-            <param name="name">The name of the style.</param>
-            <param name="foreground">The foreground color of the console.</param>
-            <param name="background">The background color of the console..</param>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Default">
-            <summary>
-            Gets the the default style used by the console.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Error">
-            <summary>
-            Gets the style used for displaying errors.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Info">
-            <summary>
-            Gets the style used for displaying informational content.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Ok">
-            <summary>
-            Gets the style used for displaying OK information.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Warning">
-            <summary>
-            Gets the style used for warnings.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Background">
-            <summary>
-            Gets the background color of the console.
-            </summary>
-            <value>The background.</value>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Foreground">
-            <summary>
-            Gets the foreground color of the console.
-            </summary>
-            <value>The foreground.</value>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Name">
-            <summary>
-            Gets the name of the style.
-            </summary>
-            <value>The name.</value>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.ConsoleStyle.Get(ConsoleExtensions.Proxy.StyleName)">
-            <summary>
-            Gets the style matching the specified name.
-            </summary>
-            <param name="name">The name.</param>
-            <returns>The ConsoleStyle.</returns>
-        </member>
-        <member name="T:ConsoleExtensions.Proxy.CursorPoint">
-            <summary>
-            Struct CursorPoint
-            </summary>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.CursorPoint.#ctor(System.Int32,System.Int32)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ConsoleExtensions.Proxy.CursorPoint"/> struct.
-            </summary>
-            <param name="top">The top.</param>
-            <param name="left">The left.</param>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.CursorPoint.Top">
-            <summary>
-            Gets the top distance from the top of the console window.
-            </summary>
-            <value>The top.</value>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.CursorPoint.Left">
-            <summary>
-            Gets the left distance from the left side of the console window.
-            </summary>
-            <value>The left.</value>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.CursorPoint.MoveLeft(System.Int32)">
-            <summary>
-            Moves the cursor to the left.
-            </summary>
-            <param name="offset">The offset.</param>
-            <returns>A new point with the new position.</returns>
-        </member>
-        <member name="T:ConsoleExtensions.Proxy.IConsoleProxy">
-            <summary>
-            Interface IConsoleProxy. Abstracts the interaction with the console.
-            </summary>
-        </member>
-        <member name="P:ConsoleExtensions.Proxy.IConsoleProxy.WindowWidth">
-            <summary>
-            Gets the width of the console window.
-            </summary>
-            <value>The width of the window.</value>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Beep">
-            <summary>
-            Plays the sound of a beep through the console speaker.
-            </summary>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Clear">
-            <summary>
-            Clears the console window.
-            </summary>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetPosition(ConsoleExtensions.Proxy.CursorPoint@)">
-            <summary>
-            Gets the current position of the cursor.
-            </summary>
-            <param name="point">The current position of the cursor.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetStyle(ConsoleExtensions.Proxy.ConsoleStyle@)">
-            <summary>
-            Gets the current style of the console.
-            </summary>
-            <param name="style">The current style of the console.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetTitle(System.String@)">
-            <summary>
-            Gets the title to display in the console title bar.
-            </summary>
-            <param name="title">The string to be displayed in the title bar of the console.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.HideCursor">
-            <summary>
-            Hides the cursor.
-            </summary>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ReadKey(System.ConsoleKeyInfo@,System.Boolean)">
-            <summary>
-            Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
-            </summary>
-            <param name="key">An object that describes the <see cref="T:System.ConsoleKey" /> constant and Unicode character, if any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo" /> object also describes, in a bitwise combination of <see cref="T:System.ConsoleModifiers" /> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.</param>
-            <param name="intercept">Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ReadLine(System.String@)">
-            <summary>
-            Reads the next line of characters from the standard input stream.
-            </summary>
-            <param name="result">The next line of characters from the input stream.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ResetStyle">
-            <summary>
-            Resets the color.
-            </summary>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetPosition(ConsoleExtensions.Proxy.CursorPoint)">
-            <summary>
-            Sets the position of the cursor.
-            </summary>
-            <param name="point">The point.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetTitle(System.String)">
-            <summary>
-            Sets the title to display in the console title bar.
-            </summary>
-            <param name="title">The string to be displayed in the title bar of the console.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ShowCursor">
-            <summary>
-            Shows the cursor.
-            </summary>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
-            <summary>
-            Sets the colors of the console.
-            </summary>
-            <param name="foreground">The foreground color.</param>
-            <param name="background">The background color.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Style(ConsoleExtensions.Proxy.ConsoleStyle)">
-            <summary>
-            Styles the output of the console based on a predefined style.
-            </summary>
-            <param name="style">The style.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Style(ConsoleExtensions.Proxy.StyleName)">
-            <summary>
-            Styles the output of the console based on a predefined style.
-            </summary>
-            <param name="name">The name.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Write(System.String)">
-            <summary>
-            Writes the specified value to the console.
-            </summary>
-            <param name="value">The value.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.WriteLine(System.String)">
-            <summary>
-            Writes a line break to the console.
-            </summary>
-            <param name="value">The value.</param>
-            <returns>The current Console Proxy.</returns>
-        </member>
-        <member name="T:ConsoleExtensions.Proxy.StyleName">
-            <summary>
-            Enum StyleName
-            </summary>
-        </member>
-        <member name="F:ConsoleExtensions.Proxy.StyleName.Default">
-            <summary>
-            The default style used by the console.
-            </summary>
-        </member>
-        <member name="F:ConsoleExtensions.Proxy.StyleName.Error">
-            <summary>
-            Style used for displaying errors.
-            </summary>
-        </member>
-        <member name="F:ConsoleExtensions.Proxy.StyleName.Info">
-            <summary>
-            Style used for displaying informational content.
-            </summary>
-        </member>
-        <member name="F:ConsoleExtensions.Proxy.StyleName.Ok">
-            <summary>
-            Style used for displaying OK information.
-            </summary>
-        </member>
-        <member name="F:ConsoleExtensions.Proxy.StyleName.Warning">
-            <summary>
-            Style used for warnings.
-            </summary>
-        </member>
-    </members>
+  <assembly>
+    <name>ConsoleExtensions.Proxy</name>
+  </assembly>
+  <members>
+    <member name="T:ConsoleExtensions.Proxy.ConsoleStyle">
+      <summary>
+        Class ConsoleStyle.
+      </summary>
+    </member>
+    <member
+      name="M:ConsoleExtensions.Proxy.ConsoleStyle.#ctor(System.String,System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
+      <summary>
+        Initializes a new instance of the <see cref="T:ConsoleExtensions.Proxy.ConsoleStyle" /> class.
+      </summary>
+      <param name="name">The name of the style.</param>
+      <param name="foreground">The foreground color of the console.</param>
+      <param name="background">The background color of the console..</param>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Default">
+      <summary>
+        Gets the the default style used by the console.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Error">
+      <summary>
+        Gets the style used for displaying errors.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Info">
+      <summary>
+        Gets the style used for displaying informational content.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Ok">
+      <summary>
+        Gets the style used for displaying OK information.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Warning">
+      <summary>
+        Gets the style used for warnings.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Background">
+      <summary>
+        Gets the background color of the console.
+      </summary>
+      <value>The background.</value>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Foreground">
+      <summary>
+        Gets the foreground color of the console.
+      </summary>
+      <value>The foreground.</value>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.ConsoleStyle.Name">
+      <summary>
+        Gets the name of the style.
+      </summary>
+      <value>The name.</value>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.ConsoleStyle.Get(ConsoleExtensions.Proxy.StyleName)">
+      <summary>
+        Gets the style matching the specified name.
+      </summary>
+      <param name="name">The name.</param>
+      <returns>The ConsoleStyle.</returns>
+    </member>
+    <member name="T:ConsoleExtensions.Proxy.CursorPoint">
+      <summary>
+        Struct CursorPoint
+      </summary>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.CursorPoint.#ctor(System.Int32,System.Int32)">
+      <summary>
+        Initializes a new instance of the <see cref="T:ConsoleExtensions.Proxy.CursorPoint" /> struct.
+      </summary>
+      <param name="top">The top.</param>
+      <param name="left">The left.</param>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.CursorPoint.Top">
+      <summary>
+        Gets the top distance from the top of the console window.
+      </summary>
+      <value>The top.</value>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.CursorPoint.Left">
+      <summary>
+        Gets the left distance from the left side of the console window.
+      </summary>
+      <value>The left.</value>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.CursorPoint.MoveLeft(System.Int32)">
+      <summary>
+        Moves the cursor to the left.
+      </summary>
+      <param name="offset">The offset.</param>
+      <returns>A new point with the new position.</returns>
+    </member>
+    <member name="T:ConsoleExtensions.Proxy.IConsoleProxy">
+      <summary>
+        Interface IConsoleProxy. Abstracts the interaction with the console.
+      </summary>
+    </member>
+    <member name="P:ConsoleExtensions.Proxy.IConsoleProxy.WindowWidth">
+      <summary>
+        Gets the width of the console window.
+      </summary>
+      <value>The width of the window.</value>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Beep">
+      <summary>
+        Plays the sound of a beep through the console speaker.
+      </summary>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Clear">
+      <summary>
+        Clears the console window.
+      </summary>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetPosition(ConsoleExtensions.Proxy.CursorPoint@)">
+      <summary>
+        Gets the current position of the cursor.
+      </summary>
+      <param name="point">The current position of the cursor.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetStyle(ConsoleExtensions.Proxy.ConsoleStyle@)">
+      <summary>
+        Gets the current style of the console.
+      </summary>
+      <param name="style">The current style of the console.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.GetTitle(System.String@)">
+      <summary>
+        Gets the title to display in the console title bar.
+      </summary>
+      <param name="title">The string to be displayed in the title bar of the console.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.HideCursor">
+      <summary>
+        Hides the cursor.
+      </summary>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ReadKey(System.ConsoleKeyInfo@,System.Boolean)">
+      <summary>
+        Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the console window.
+      </summary>
+      <param name="key">
+        An object that describes the <see cref="T:System.ConsoleKey" /> constant and Unicode character, if any, that correspond to the pressed console key. The
+        <see cref="T:System.ConsoleKeyInfo" /> object also describes, in a bitwise combination of
+        <see cref="T:System.ConsoleModifiers" /> values, whether one or more Shift, Alt, or Ctrl modifier keys was pressed simultaneously with the console key.
+      </param>
+      <param name="intercept">Determines whether to display the pressed key in the console window. true to not display the pressed key; otherwise, false.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ReadLine(System.String@)">
+      <summary>
+        Reads the next line of characters from the standard input stream.
+      </summary>
+      <param name="result">The next line of characters from the input stream.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ResetStyle">
+      <summary>
+        Resets the color.
+      </summary>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetPosition(ConsoleExtensions.Proxy.CursorPoint)">
+      <summary>
+        Sets the position of the cursor.
+      </summary>
+      <param name="point">The point.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetTitle(System.String)">
+      <summary>
+        Sets the title to display in the console title bar.
+      </summary>
+      <param name="title">The string to be displayed in the title bar of the console.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.ShowCursor">
+      <summary>
+        Shows the cursor.
+      </summary>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member
+      name="M:ConsoleExtensions.Proxy.IConsoleProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
+      <summary>
+        Sets the colors of the console.
+      </summary>
+      <param name="foreground">The foreground color.</param>
+      <param name="background">The background color.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Style(ConsoleExtensions.Proxy.ConsoleStyle)">
+      <summary>
+        Styles the output of the console based on a predefined style.
+      </summary>
+      <param name="style">The style.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Style(ConsoleExtensions.Proxy.StyleName)">
+      <summary>
+        Styles the output of the console based on a predefined style.
+      </summary>
+      <param name="name">The name.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.Write(System.String)">
+      <summary>
+        Writes the specified value to the console.
+      </summary>
+      <param name="value">The value.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="M:ConsoleExtensions.Proxy.IConsoleProxy.WriteLine(System.String)">
+      <summary>
+        Writes a line break to the console.
+      </summary>
+      <param name="value">The value.</param>
+      <returns>The current Console Proxy.</returns>
+    </member>
+    <member name="T:ConsoleExtensions.Proxy.StyleName">
+      <summary>
+        Enum StyleName
+      </summary>
+    </member>
+    <member name="F:ConsoleExtensions.Proxy.StyleName.Default">
+      <summary>
+        The default style used by the console.
+      </summary>
+    </member>
+    <member name="F:ConsoleExtensions.Proxy.StyleName.Error">
+      <summary>
+        Style used for displaying errors.
+      </summary>
+    </member>
+    <member name="F:ConsoleExtensions.Proxy.StyleName.Info">
+      <summary>
+        Style used for displaying informational content.
+      </summary>
+    </member>
+    <member name="F:ConsoleExtensions.Proxy.StyleName.Ok">
+      <summary>
+        Style used for displaying OK information.
+      </summary>
+    </member>
+    <member name="F:ConsoleExtensions.Proxy.StyleName.Warning">
+      <summary>
+        Style used for warnings.
+      </summary>
+    </member>
+  </members>
 </doc>
