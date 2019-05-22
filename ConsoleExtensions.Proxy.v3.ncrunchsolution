@@ -4,6 +4,7 @@
     <MetricsExclusionList>
       <Value>Tests\ConsoleExtensions.Proxy.Tests.csproj</Value>
       <Value>Demo\Demo.csproj</Value>
+      <Value>TestProxy\ConsoleExtensions.Proxy.TestHelpers.csproj</Value>
     </MetricsExclusionList>
     <SolutionConfigured>True</SolutionConfigured>
   </Settings>
