@@ -8,18 +8,23 @@
     <Summery>Wraps System.Console in a interface for testability, injectability and general niceness.</Summery>
     <Copyright>Lasse Sjørup 2019</Copyright>
     <PackageTags>Console, Dependency injection</PackageTags>
-    <AssemblyVersion>0.9.0.0</AssemblyVersion>
-    <FileVersion>0.9.0.0</FileVersion>
-    <Version>0.9.0-Dev</Version>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <Version>0.1.1-Dev</Version>
     <Title>ConsoleExtensions Proxy</Title>
     <PackageProjectUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/</RepositoryUrl>
     <PackageIconUrl>https://github.com/oswaldsql/ConsoleExtensions.Proxy/blob/master/Icon.png?raw=true</PackageIconUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageLicenseUrl></PackageLicenseUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Code\ConsoleExtensions\Proxy\CoreInterface\ConsoleExtensions.Proxy.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Code\ConsoleExtensions\Proxy\CoreInterface\ConsoleExtensions.Proxy.xml</DocumentationFile>
   </PropertyGroup>
 

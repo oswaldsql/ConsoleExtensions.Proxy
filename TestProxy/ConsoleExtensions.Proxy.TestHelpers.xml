@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleExtensions.Proxy.TestHelpers</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleExtensions.Proxy.TestHelpers.ConsoleKeyInfoStackExtensions">
+            <summary>
+                Class ConsoleKeyInfoStackExtensions.
+            </summary>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.ConsoleKeyInfoStackExtensions.Add(System.Collections.Generic.Queue{System.ConsoleKeyInfo},System.String)">
+            <summary>
+                Adds the specified string as individual characters to the console key queue.
+            </summary>
+            <param name="target">The console key queue to add to.</param>
+            <param name="values">The string value to add.</param>
+            <returns>The console key queue.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.ConsoleKeyInfoStackExtensions.Add(System.Collections.Generic.Queue{System.ConsoleKeyInfo},System.ConsoleKey,ConsoleExtensions.Proxy.TestHelpers.ControlKeys)">
+            <summary>
+                Adds the specified console key to the console key queue.
+            </summary>
+            <param name="target">The console key queue to add to.</param>
+            <param name="value">The key value to add.</param>
+            <param name="controlKeys">The control keys used to specify [shift], [alt] and [ctrl] .</param>
+            <returns>The console key queue.</returns>
+        </member>
+        <member name="T:ConsoleExtensions.Proxy.TestHelpers.ControlKeys">
+            <summary>
+                Enum ControlKeys
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.ControlKeys.None">
+            <summary>
+                No control keys.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.ControlKeys.Shift">
+            <summary>
+                The shift key.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.ControlKeys.Alt">
+            <summary>
+                The alt key.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.ControlKeys.Control">
+            <summary>
+                The control key-
+            </summary>
+        </member>
+        <member name="T:ConsoleExtensions.Proxy.TestHelpers.NoMoreKeysInKeyQueue">
+            <summary>
+                Class NoMoreKeysInKeyQueue. Thrown when the console key queue is empty. Implements the
+                <see cref="T:System.Exception" />
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="T:ConsoleExtensions.Proxy.TestHelpers.TestProxy">
+            <summary>
+                Class TestProxy.
+            </summary>
+            <seealso cref="T:ConsoleExtensions.Proxy.IConsoleProxy" />
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Keys">
+            <summary>
+                The keys used for simulating the keys pressed by the user.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.TestProxy.result">
+            <summary>
+                The resulting output.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.TestProxy.innerTitle">
+            <summary>
+                Container for the console title.
+            </summary>
+        </member>
+        <member name="F:ConsoleExtensions.Proxy.TestHelpers.TestProxy.position">
+            <summary>
+                The position of the cursor.
+            </summary>
+        </member>
+        <member name="P:ConsoleExtensions.Proxy.TestHelpers.TestProxy.WindowWidth">
+            <summary>
+                Gets the width of the console window.
+            </summary>
+        </member>
+        <member name="P:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Background">
+            <summary>
+                Gets or sets the background.
+            </summary>
+        </member>
+        <member name="P:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Foreground">
+            <summary>
+                Gets or sets the foreground.
+            </summary>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Beep">
+            <summary>
+                Plays the sound of a beep through the console speaker.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Clear">
+            <summary>
+                Clears the console window.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.GetPosition(ConsoleExtensions.Proxy.CursorPoint@)">
+            <summary>
+                Gets the current position of the cursor.
+            </summary>
+            <param name="point">The current position of the cursor.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.GetStyle(ConsoleExtensions.Proxy.ConsoleStyle@)">
+            <summary>
+                Gets the current style of the console.
+            </summary>
+            <param name="style">The current style of the console.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.GetTitle(System.String@)">
+            <summary>
+                Gets the title to display in the console title bar.
+            </summary>
+            <param name="title">The string to be displayed in the title bar of the console.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.HideCursor">
+            <summary>
+                Hides the cursor.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ReadKey(System.ConsoleKeyInfo@,System.Boolean)">
+            <summary>
+                Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the
+                console window.
+            </summary>
+            <param name="key">
+                An object that describes the <see cref="T:System.ConsoleKey" /> constant and Unicode character, if
+                any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo" /> object also describes,
+                in a bitwise combination of <see cref="T:System.ConsoleModifiers" /> values, whether one or more Shift, Alt, or
+                Ctrl modifier keys was pressed simultaneously with the console key.
+            </param>
+            <param name="intercept">
+                Determines whether to display the pressed key in the console window. true to not display the
+                pressed key; otherwise, false.
+            </param>
+            <returns>The current Console Proxy.</returns>
+            <exception cref="T:ConsoleExtensions.Proxy.TestHelpers.NoMoreKeysInKeyQueue">Thrown when no more keys exists in the queue.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ReadLine(System.String@)">
+            <summary>
+                Reads the next line of characters from the standard input stream.
+            </summary>
+            <param name="value">The next line of characters from the input stream.</param>
+            <returns>The current Console Proxy.</returns>
+            <exception cref="T:ConsoleExtensions.Proxy.TestHelpers.NoMoreKeysInKeyQueue">Thrown if no more keys exists in the console key queue.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ResetStyle">
+            <summary>
+                Resets the color.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
+            <summary>
+                Sets the colors of the console.
+            </summary>
+            <param name="foreground">The foreground color.</param>
+            <param name="background">The background color.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.SetPosition(ConsoleExtensions.Proxy.CursorPoint)">
+            <summary>
+                Sets the position of the cursor.
+            </summary>
+            <param name="point">The point.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.SetTitle(System.String)">
+            <summary>
+                Sets the title to display in the console title bar.
+            </summary>
+            <param name="title">The string to be displayed in the title bar of the console.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ShowCursor">
+            <summary>
+                Shows the cursor.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Style(ConsoleExtensions.Proxy.ConsoleStyle)">
+            <summary>
+                Styles the output of the console based on a predefined style.
+            </summary>
+            <param name="style">The style.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Style(ConsoleExtensions.Proxy.StyleName)">
+            <summary>
+                Styles the output of the console based on a predefined style.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ToString">
+            <summary>
+                Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Write(System.String)">
+            <summary>
+                Writes the specified value to the console.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.WriteLine(System.String)">
+            <summary>
+                Writes a line break to the console.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.Append(System.String,System.String)">
+            <summary>
+                Appends the specified name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.TestHelpers.TestProxy.ReadKey(System.Boolean)">
+            <summary>
+                Reads a key from the keys queue.
+            </summary>
+            <param name="intercept">If true the key is intercepted.</param>
+            <returns>the console key next in the queue.</returns>
+            <exception cref="T:ConsoleExtensions.Proxy.TestHelpers.NoMoreKeysInKeyQueue">Thrown when no more keys exists in the queue.</exception>
+        </member>
+    </members>
+</doc>

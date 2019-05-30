@@ -6,98 +6,180 @@
     <members>
         <member name="T:ConsoleExtensions.Proxy.ConsoleProxy">
             <summary>
-            Class ConsoleProxy.
+                Class ConsoleProxy.
             </summary>
             <seealso cref="T:ConsoleExtensions.Proxy.IConsoleProxy" />
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.#cctor">
             <summary>
-            Initializes static members of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy"/> class.
+                Initializes static members of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy" /> class.
             </summary>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.#ctor">
             <summary>
-            Prevents a default instance of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy"/> class from being created from the outside.
+                Prevents a default instance of the <see cref="T:ConsoleExtensions.Proxy.ConsoleProxy" /> class from being created from the outside.
             </summary>
         </member>
         <member name="P:ConsoleExtensions.Proxy.ConsoleProxy.WindowWidth">
-            <inheritdoc />
+            <summary>
+                Gets the width of the console window.
+            </summary>
         </member>
         <member name="P:ConsoleExtensions.Proxy.ConsoleProxy.LocalInstance">
             <summary>
-            Gets the instance.
+                Gets the instance.
             </summary>
-            <value>The instance.</value>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Instance">
             <summary>
-            Gets the shared instance of the console proxy.
+                Gets the shared instance of the console proxy.
             </summary>
-            <returns>
-            Instance of the console proxy wrapping the static System.Console.
-            </returns>
+            <returns>Instance of the console proxy wrapping the static System.Console.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Beep">
-            <inheritdoc />
+            <summary>
+                Plays the sound of a beep through the console speaker.
+            </summary>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Clear">
-            <inheritdoc />
+            <summary>
+                Clears the console window.
+            </summary>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.GetPosition(ConsoleExtensions.Proxy.CursorPoint@)">
-            <inheritdoc />
+            <summary>
+                Gets the current position of the cursor.
+            </summary>
+            <param name="point">The current position of the cursor.</param>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.GetStyle(ConsoleExtensions.Proxy.ConsoleStyle@)">
-            <inheritdoc />
+            <summary>
+                Gets the current style of the console.
+            </summary>
+            <param name="style">The current style of the console.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.GetTitle(System.String@)">
+            <summary>
+                Gets the title to display in the console title bar.
+            </summary>
+            <param name="title">The string to be displayed in the title bar of the console.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.HideCursor">
-            <inheritdoc />
+            <summary>
+                Hides the cursor.
+            </summary>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ReadKey(System.ConsoleKeyInfo@,System.Boolean)">
-            <inheritdoc />
+            <summary>
+                Obtains the next character or function key pressed by the user. The pressed key is optionally displayed in the
+                console window.
+            </summary>
+            <param name="key">
+                An object that describes the <see cref="T:System.ConsoleKey" /> constant and Unicode character, if
+                any, that correspond to the pressed console key. The <see cref="T:System.ConsoleKeyInfo" /> object also describes,
+                in a bitwise combination of <see cref="T:System.ConsoleModifiers" /> values, whether one or more Shift, Alt, or
+                Ctrl modifier keys was pressed simultaneously with the console key.
+            </param>
+            <param name="intercept">
+                Determines whether to display the pressed key in the console window. true to not display the
+                pressed key; otherwise, false.
+            </param>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ReadLine(System.String@)">
-            <inheritdoc />
+            <summary>
+                Reads the next line of characters from the standard input stream.
+            </summary>
+            <param name="result">The next line of characters from the input stream.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
-            <exception cref="T:System.OutOfMemoryException">There is insufficient memory to allocate a buffer for the returned string.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">The number of characters in the next line of characters is greater than <see cref="F:System.Int32.MaxValue" />.</exception>
+            <exception cref="T:System.OutOfMemoryException">
+                There is insufficient memory to allocate a buffer for the returned
+                string.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                The number of characters in the next line of characters is
+                greater than <see cref="F:System.Int32.MaxValue" />.
+            </exception>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ResetStyle">
-            <inheritdoc />
+            <summary>
+                Resets the color.
+            </summary>
+            <returns>The current Console Proxy.</returns>
+            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
+            <summary>
+                Sets the colors of the console.
+            </summary>
+            <param name="foreground">The foreground color.</param>
+            <param name="background">The background color.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetPosition(ConsoleExtensions.Proxy.CursorPoint)">
-            <inheritdoc />
+            <summary>
+                Sets the position of the cursor.
+            </summary>
+            <param name="point">The point.</param>
+            <returns>The current Console Proxy.</returns>
+        </member>
+        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetTitle(System.String)">
+            <summary>
+                Sets the title to display in the console title bar.
+            </summary>
+            <param name="title">The string to be displayed in the title bar of the console.</param>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.ShowCursor">
-            <inheritdoc />
-        </member>
-        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetColor(System.Nullable{System.ConsoleColor},System.Nullable{System.ConsoleColor})">
-            <inheritdoc />
-            <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
+            <summary>
+                Shows the cursor.
+            </summary>
+            <returns>The current Console Proxy.</returns>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Style(ConsoleExtensions.Proxy.ConsoleStyle)">
-            <inheritdoc />
+            <summary>
+                Styles the output of the console based on a predefined style.
+            </summary>
+            <param name="style">The style.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Style(ConsoleExtensions.Proxy.StyleName)">
-            <inheritdoc />
+            <summary>
+                Styles the output of the console based on a predefined style.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.Security.SecurityException">The user does not have permission to perform this action.</exception>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
-        <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.SetTitle(System.String)">
-            <inheritdoc />
-        </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.Write(System.String)">
-            <inheritdoc />
+            <summary>
+                Writes the specified value to the console.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
         <member name="M:ConsoleExtensions.Proxy.ConsoleProxy.WriteLine(System.String)">
-            <inheritdoc />
+            <summary>
+                Writes a line break to the console.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The current Console Proxy.</returns>
             <exception cref="T:System.IO.IOException">An I/O error occurred.</exception>
         </member>
     </members>
